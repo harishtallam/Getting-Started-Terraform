@@ -56,6 +56,7 @@ Eg: terraform plan -out m3.tfplan
 ```bash
 terraform apply "<<PLAN_NAME>>.tfplan"
 Eg: terraform apply "m3.tfplan"
+```
 
 * Destroying/Deleting the resources
 ```bash
