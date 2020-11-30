@@ -52,7 +52,9 @@ Eg: terraform plan -out m3.tfplan
 ```
 
 * Applying the plan - This actually create necessary resources defined in the plan.
-  * Also stores current stage of configuration in "terraform.tfstate" file
+  * Also stores current state of configuration in "terraform.tfstate" file in JSON format
+  * The ".tfstate" file is not supposed to be edited, it is solely terraform responsibility to modify it
+  * Usually, "tfstate" file generates locally. It also be generated in remote locations like cloud - AWS S3 storage, Azure Blob storage, NFS and Terraform cloud etc.
 ```bash
 terraform apply "<<PLAN_NAME>>.tfplan"
 Eg: terraform apply "m3.tfplan"
